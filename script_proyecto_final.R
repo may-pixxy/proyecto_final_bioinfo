@@ -93,7 +93,6 @@ if (cts == "1") {
 # preguntas es la extraccion de una cantidad x de recetas de la base de datos 
   
 }
-View (lista)
 rectsf()  
 
 

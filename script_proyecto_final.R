@@ -138,8 +138,6 @@ cqc <- readline(prompt = "¿Para cuantas personas es la comida? Elija alguna de 
 # la condicion especifica, no arroja un resultado. En esta parte del filtro tambien se generaron grupos, los cuales estaban constituidos por el 
 # numero de comensales, el primero gurpo "menos de dos" se incluyen unicamente 1 o 2 comensales; mientras que en el segundo grupo "mas de dos" 
 # hace referencia a que la receta incluye de 3 comensales en adelante
-  
-rectsf()  
 
 lista_ca <- lista_tiempo_comens [, c(2, 8)]
 

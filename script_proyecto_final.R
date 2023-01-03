@@ -94,10 +94,8 @@ if (cts == "1") {
 # preguntas es la extraccion de una cantidad x de recetas de la base de datos 
   
   
-tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar? 
-                   Eija alguna de las siguientes opciones: menos de una hora, mas de una hora, mas de dos horas, mas de tres horas")
-  cqc <- readline(prompt = "¿Para cuantas personas es la comida? 
-                  Elija alguna de las siguientes opciones: menos de dos y/o mas de dos" )
+tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar? Elija alguna de las siguientes opciones: menos de una hora, mas de una hora, mas de dos horas, mas de tres horas")
+cqc <- readline(prompt = "¿Para cuantas personas es la comida? Elija alguna de las siguientes opciones: menos de dos y/o mas de dos" )
   
   if (tpc == "menos de una hora" & cqc=="menos de dos") {
     lista_tiempo_comens <- subset(lista, time == c(10, 15, 30, 35, 40, 45) & comens == c (1, 2))
@@ -124,22 +122,22 @@ tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar?
     lista_tiempo_comens <- subset(lista, time == c(180, 240, 360, 480, 1140) & comens == c (3, 4 ,5 ,6 ,7 ,8 ,10 ,11 ,12, 15, 16, 20))
     
   }        
+
+# Aqui se agregan los siguientes dos filtros, es decir, a partir del primer filtro que se realizó en la parte de arriba se genera una base de datos
+# "nueva" es decir, la base de datos de "recetas" original se filtra, a partir de este filtro se genera una nueva base denominada "lista" a la cual 
+# se le aplica un nuevo filtro constituido de dos caracteristicas diferentes las cuales son el tiempo del que se dispone para cocinar y la cantidad
+# de comensales 
   
-  #Aqui se agregan los siguientes dos filtros, es decir, a partir del primer filtro que se realizó en la parte de arriba se genera una base de datos
-  #"nueva" es decir, la base de datos de "recetas" original se filtra, a partir de este filtro se genera una nueva base denominada "lista" a la cual 
-  #se le aplica un nuevo filtro constituido de dos caracteristicas diferentes las cuales son el tiempo del que se dispone para cocinar y la cantidad
-  #de comensales 
+# Para el filtro del tiempo, se generaron cuatro grupos debido a que se cuenta con un horario muy diverso y colocar el numero especifico 
+# de tiempo en minutos resulta en una cantidad inmensa de codigo, por esta razon, concatenamos el tiempo para generar vectores que en funcion 
+# del tiempo se agruparan en "menos de una hora", en la cual se incluyen recetas que tienen un lapso de 10 a 45 minutos; "mas de una hora", que cuenta con recetas
+# de 60 minutos, 80 y 90 minutos; "mas de dos horas" que cuenta con recetas de 150 minutos; "mas de tres horas" en donde se incluyen recetas que van desde los 180
+# minutos hasta 1140 minutos, lo cual equivale a 19 horas. 
   
-  #Para el filtro del tiempo, se generaron cuatro grupos debido a que se cuenta con un horario muy diverso y colocar el numero especifico 
-  #de tiempo en minutos resulta en una cantidad inmensa de codigo, por esta razon, concatenamos el tiempo para generar vectores que en funcion 
-  #del tiempo se agruparan en "menos de una hora", en la cual se incluyen recetas que tienen un lapso de 10 a 45 minutos; "mas de una hora", que cuenta con recetas
-  #de 60 minutos, 80 y 90 minutos; "mas de dos horas" que cuenta con recetas de 150 minutos; "mas de tres horas" en donde se incluyen recetas que van desde los 180
-  #minutos hasta 1140 minutos, lo cual equivale a 19 horas. 
-  
-  #Para el filtro del tiempo utilizamos el signo de ampersand que es altamente estricto a la hora de generar un filtro, pues si no se cumple con
-  #la condicion especifica, no arroja un resultado. En esta parte del filtro tambien se generaron grupos, los cuales estaban constituidos por el 
-  #numero de comensales, el primero gurpo "menos de dos" se incluyen unicamente 1 o 2 comensales; mientras que en el segundo grupo "mas de dos" 
-  #hace referencia a que la receta incluye de 3 comensales en adelante
+# Para el filtro del tiempo utilizamos el signo de ampersand que es altamente estricto a la hora de generar un filtro, pues si no se cumple con
+# la condicion especifica, no arroja un resultado. En esta parte del filtro tambien se generaron grupos, los cuales estaban constituidos por el 
+# numero de comensales, el primero gurpo "menos de dos" se incluyen unicamente 1 o 2 comensales; mientras que en el segundo grupo "mas de dos" 
+# hace referencia a que la receta incluye de 3 comensales en adelante
   
 rectsf()  
 

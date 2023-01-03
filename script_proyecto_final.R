@@ -94,8 +94,10 @@ if (cts == "1") {
 # preguntas es la extraccion de una cantidad x de recetas de la base de datos 
   
   
-tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar? Elija alguna de las siguientes opciones: menos de una hora, mas de una hora, mas de dos horas, mas de tres horas")
-cqc <- readline(prompt = "¿Para cuantas personas es la comida? Elija alguna de las siguientes opciones: menos de dos y/o mas de dos" )
+tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar? 
+Elija alguna de las siguientes opciones: menos de una hora, mas de una hora, mas de dos horas, mas de tres horas. ")
+cqc <- readline(prompt = "¿Para cuantas personas es la comida? 
+Elija alguna de las siguientes opciones: menos de dos y/o mas de dos. " )
   
   if (tpc == "menos de una hora" & cqc=="menos de dos") {
     lista_tiempo_comens <- subset(lista, time == c(10, 15, 30, 35, 40, 45) & comens == c (1, 2))

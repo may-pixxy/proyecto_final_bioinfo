@@ -2,6 +2,7 @@
 
 library (dplyr)
 library (stringr)
+library (pander)
 
 # Objetivo. En base a datos que van a ser provistos por el usuario, como la cantidad y 
 # tipo de ingredientes, tiempo disponible para cocinar y tipo de platillo que se desea, 
@@ -139,6 +140,30 @@ tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar?
   #la condicion especifica, no arroja un resultado. En esta parte del filtro tambien se generaron grupos, los cuales estaban constituidos por el 
   #numero de comensales, el primero gurpo "menos de dos" se incluyen unicamente 1 o 2 comensales; mientras que en el segundo grupo "mas de dos" 
   #hace referencia a que la receta incluye de 3 comensales en adelante
+  
+rectsf()  
+
+lista_ca <- lista_tiempo_comens [, c(2, 8)]
+
+print (paste("Hola", nombre, ", en base a los datos ingresados te muestro las siguientes recetas que hacen match con lo que necesitas, en esta tabla se encuentra el nombre de la receta junto con el resto de ingredientes que deben usarse. Elige una receta que desees te sea mostrada"))
+
+View (lista_ca)
+
+elx <- readline (prompt = "¿cual es la receta de tu eleccion? Escribela textualmente (ej. receta_de_quinoa_con_setas): ")
+
+recetaf <- subset (lista_tiempo_comens, nombre == elx)
+link <- recetaf [ 1, 7]
+link
+  
+# En esta siguiente parte creamos una matriz donde los unicos elementos mostrados seran el nombre de la receta y los 
+# ingredientes. Arrojamos un mensaje explicandole el siguiente paso al usuario y colocamos un objeto donde el usuario
+# introducira el nombre textual de la receta que desea. 
+# del data.frame que ya fue pasado por los tres filtros, extraemos el renglon que haga match con el nombre ingresado 
+# de esa forma solo obtenemos una de las recetas (la seleccionada por el usuario), de esta unica receta vamos 
+# a extraer unicamente el link, que se encuentra en la columna 7 y lo asignamos a un objeto donde colocamos as.vector
+# para leer el objeto sin el nombre del renglon o columna 
+# El siguiente paso es descargar el contenido de este link en un documento en pdf 
+
 }
 
 rectsf()   

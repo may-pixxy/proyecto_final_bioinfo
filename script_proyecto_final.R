@@ -133,7 +133,7 @@ tpc <- readline (prompt = "¿con cuanto tiempo dispone para cocinar?
   #de tiempo en minutos resulta en una cantidad inmensa de codigo, por esta razon, concatenamos el tiempo para generar vectores que en funcion 
   #del tiempo se agruparan en "menos de una hora", en la cual se incluyen recetas que tienen un lapso de 10 a 45 minutos; "mas de una hora", que cuenta con recetas
   #de 60 minutos, 80 y 90 minutos; "mas de dos horas" que cuenta con recetas de 150 minutos; "mas de tres horas" en donde se incluyen recetas que van desde los 180
-  #minutos hasta 1140 minutos, lo cual equivale a 17 horas. 
+  #minutos hasta 1140 minutos, lo cual equivale a 19 horas. 
   
   #Para el filtro del tiempo utilizamos el signo de ampersand que es altamente estricto a la hora de generar un filtro, pues si no se cumple con
   #la condicion especifica, no arroja un resultado. En esta parte del filtro tambien se generaron grupos, los cuales estaban constituidos por el 

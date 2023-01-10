@@ -162,6 +162,15 @@ link
 # para leer el objeto sin el nombre del renglon o columna 
 # El siguiente paso es descargar el contenido de este link en un documento en pdf 
 
+# Intento de descargar la pagina de internet del usuario 
+# Para intentar si lo descar utilizo 
+# link <- recetas [1, 7]
+download.file (link, destfile = "C:/Users/Preci/Downloads/recetita.html")
+
+openFileInOS("C:/Users/Preci/Downloads/recetita.html")
+
+  
+
 }
 
 rectsf()   

@@ -7,7 +7,7 @@
 # elegir entre las distintas opciones provistas. 
 
 # El primer paso es colocar la base de datos con la que trabajamos aqui. 
-recetas <- read.csv ("01_raw_data/recetas.csv")
+recetas <- read.csv ("01_raw_data/recetass.csv")
 View (recetas)
 
 # Delimitar una funcion que nos permita obtener datos del usuario 
@@ -138,7 +138,7 @@ Elija alguna de las siguientes opciones: menos de dos y/o mas de dos. " )
 # numero de comensales, el primero gurpo "menos de dos" se incluyen unicamente 1 o 2 comensales; mientras que en el segundo grupo "mas de dos" 
 # hace referencia a que la receta incluye de 3 comensales en adelante
 
-lista_ca <- lista_tiempo_comens [, c(2, 8)]
+lista_ca <- lista_tiempo_comens [, c(2, 6, 9)]
 
 print (paste("Hola", nombre, ", en base a los datos ingresados te muestro las siguientes recetas que hacen match con lo que necesitas, en esta tabla se encuentra el nombre de la receta junto con el resto de ingredientes que deben usarse. Elige una receta que desees te sea mostrada"))
 
@@ -147,7 +147,7 @@ View (lista_ca)
 elx <- readline (prompt = "¿cual es la receta de tu eleccion? Escribela textualmente (ej. receta_de_quinoa_con_setas): ")
 
 recetaf <- subset (lista_tiempo_comens, nombre == elx)
-link <- recetaf [ 1, 7]
+link <- recetaf [ 1, 8]
 link
   
 # En esta siguiente parte creamos una matriz donde los unicos elementos mostrados seran el nombre de la receta y los 

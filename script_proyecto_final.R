@@ -1,9 +1,5 @@
 # Proyecto final bioinformatica script 
 
-library (dplyr)
-library (stringr)
-library (pander)
-
 # Objetivo. En base a datos que van a ser provistos por el usuario, como la cantidad y 
 # tipo de ingredientes, tiempo disponible para cocinar y tipo de platillo que se desea, 
 # proveer al usuario de una lista de recetas que cumplan con estos requisitos. 
@@ -11,6 +7,7 @@ library (pander)
 # elegir entre las distintas opciones provistas. 
 
 # El primer paso es colocar la base de datos con la que trabajamos aqui. 
+recetas <- read.csv ("01_raw_data/recetas.csv")
 View (recetas)
 
 # Delimitar una funcion que nos permita obtener datos del usuario 

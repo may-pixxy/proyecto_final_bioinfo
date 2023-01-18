@@ -97,28 +97,28 @@ cqc <- readline(prompt = "¿Para cuantas personas es la comida?
 Elija alguna de las siguientes opciones: menos de dos y/o mas de dos. " )
   
   if (tpc == "menos de una hora" & cqc=="menos de dos") {
-    lista_tiempo_comens <- subset(lista, time == c(10, 15, 30, 35, 40, 45) & comens == c (1, 2))
+    lista_tiempo_comens <- subset(lista, time == 1 & comens == 1)
     
   } else if (tpc == "menos de una hora" & cqc=="mas de dos") {
-    lista_tiempo_comens <- subset(lista, time == c(10, 15, 30, 35, 40, 45) & comens == c (3, 4 ,5 ,6 ,7 ,8 ,10 ,11 ,12, 15, 16, 20))
+    lista_tiempo_comens <- subset(lista, time == 1 & comens == 2)
     
   } else if (tpc == "mas de una hora" & cqc=="menos de dos") {
-    lista_tiempo_comens <- subset(lista, time == c(60, 80, 90) & comens == c (1, 2))
+    lista_tiempo_comens <- subset(lista, time == 2 & comens == 1)
     
   } else if (tpc == "mas de una hora" & cqc=="mas de dos") {
-    lista_tiempo_comens <- subset(lista, time == c(60, 80, 90) & comens == c (3, 4 ,5 ,6 ,7 ,8 ,10 ,11 ,12, 15, 16, 20))
+    lista_tiempo_comens <- subset(lista, time == 2 & comens == 2)
     
   } else if (tpc == "mas de dos horas" & cqc=="menos de dos") {
-    lista_tiempo_comens <- subset(lista, time == 150 & comens == c (1,2))
+    lista_tiempo_comens <- subset(lista, time == 3 & comens == 1)
     
   } else if (tpc == "mas de dos horas" & cqc=="mas de dos") {
-    lista_tiempo_comens <- subset(lista, time == 150 & comens == c (3, 4 ,5 ,6 ,7 ,8 ,10 ,11 ,12, 15, 16, 20))
+    lista_tiempo_comens <- subset(lista, time == 3 & comens == 2)
     
   } else if (tpc == "mas de tres horas" & cqc=="menos de dos") {
-    lista_tiempo_comens <- subset(lista, time == c(180, 240, 360, 480, 1140) & comens == c (1, 2))
+    lista_tiempo_comens <- subset(lista, time == 4 & comens == 1)
     
   } else if (tpc == "mas de tres horas" & cqc=="mas de dos") {
-    lista_tiempo_comens <- subset(lista, time == c(180, 240, 360, 480, 1140) & comens == c (3, 4 ,5 ,6 ,7 ,8 ,10 ,11 ,12, 15, 16, 20))
+    lista_tiempo_comens <- subset(lista, time == 4 & comens == 2)
     
   }        
 
@@ -157,7 +157,6 @@ link
 # de esa forma solo obtenemos una de las recetas (la seleccionada por el usuario), de esta unica receta vamos 
 # a extraer unicamente el link, que se encuentra en la columna 7 y lo asignamos a un objeto donde colocamos as.vector
 # para leer el objeto sin el nombre del renglon o columna 
-# El siguiente paso es descargar el contenido de este link en un documento en pdf 
 
 }
 
